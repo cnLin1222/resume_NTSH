@@ -1,18 +1,96 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
 <head>
-    <title>讀書計畫</title>
+    <meta charset="UTF-8">
+    <title>讀書計畫 - 新北高中林新恩</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* 全站基本樣式 */
+        body {
+            font-family: "微軟正黑體", sans-serif;
+            background: linear-gradient(to bottom right, #f0f4f8, #ffffff);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* 主容器 */
+        .container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 標題 */
+        h1 {
+            font-size: 28px;
+            color: #1a73e8;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* 導覽清單 */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        nav li {
+            background-color: #e8f0fe;
+            border-radius: 8px;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        nav li:hover {
+            background-color: #d2e3fc;
+            transform: translateX(5px);
+        }
+
+        nav a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #1a237e;
+            font-weight: 500;
+        }
+
+        /* 手機響應式設計 */
+        @media (max-width: 600px) {
+            .container {
+                margin: 30px 16px;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            nav a {
+                padding: 12px 16px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>新北高中林新恩 讀書計畫</h1>
-    <ul>
-        <li><a href="/competition">競賽經驗</a></li>
-        <li><a href="/activities">課外活動</a></li>
-        <li><a href="/leadership">幹部經驗</a></li>
-        <li><a href="/club">社團經驗</a></li>
-        <li><a href="/electives">多元選修課程</a></li>
-        <li><a href="/ai">AI應用</a></li>
-    </ul>
+    <div class="container">
+        <h1>新北高中林新恩 讀書計畫</h1>
+        <nav>
+            <ul>
+                <li><a href="/competition">📚 競賽經驗</a></li>
+                <li><a href="/activities">🎨 課外活動</a></li>
+                <li><a href="/leadership">👥 幹部經驗</a></li>
+                <li><a href="/club">🎯 社團經驗</a></li>
+                <li><a href="/electives">📖 多元選修課程</a></li>
+                <li><a href="/ai">🤖 AI應用</a></li>
+            </ul>
+        </nav>
+    </div>
 </body>
 </html>
+
