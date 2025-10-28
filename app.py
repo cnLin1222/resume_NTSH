@@ -35,7 +35,7 @@ questions_answers = {
     "醫生": "doctor",
     "doctor": "醫生",
     "護士": "nurse",
-    "sad": "難過"
+    "sad": "難過"}
 
 
 @app.route('/')
