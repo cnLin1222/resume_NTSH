@@ -1,5 +1,4 @@
-2025.10.28 星期二
-11:26 ：）（313程博） from flask import Flask, render_template
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
