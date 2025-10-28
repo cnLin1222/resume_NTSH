@@ -1,83 +1,17 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>問答系統 - Ask</title>
-    <style>
-        body {
-            font-family: "Microsoft JhengHei", sans-serif;
-            background-color: #f9fafc;
-            margin: 40px auto;
-            max-width: 600px;
-            text-align: center;
-        }
-        h1 {
-            color: #333;
-        }
-        textarea {
-            width: 100%;
-            height: 100px;
-            padding: 10px;
-            margin-top: 10px;
-            font-size: 16px;
-        }
-        button {
-            margin-top: 15px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        #answer {
-            margin-top: 25px;
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            text-align: left;
-            white-space: pre-wrap;
-        }
-    </style>
+    <title>問答系統</title>
 </head>
 <body>
-    <h1>問答系統</h1>
-    <p>請輸入您的問題：</p>
+    <h1>問我問題！</h1>
+    <form method="POST">
+        <input type="text" name="question" placeholder="請輸入問題" value="{{ question }}">
+        <button type="submit">送出</button>
+    </form>
 
-    <textarea id="question" placeholder="例如：地球為什麼會自轉？"></textarea><br>
-    <button onclick="getAnswer()">送出問題</button>
-
-    <div id="answer"></div>
-
-    <script>
-        function getAnswer() {
-            const question = document.getElementById("question").value.trim();
-            const answerDiv = document.getElementById("answer");
-
-            if (question === "") {
-                answerDiv.innerHTML = "⚠️ 請輸入問題後再送出！";
-                return;
-            }
-
-            // 模擬回覆，可改成呼叫後端 API
-            let answer = "";
-            if (question.includes("地球")) {
-                answer = "地球會自轉是因為在形成時保留了角動量，除非有外力作用，它會一直自轉下去。";
-            } else if (question.includes("你是誰")) {
-                answer = "我是問答系統小幫手，可以幫你回答問題！";
-            } else {
-                answer = "這是一個範例回答：您問的是「" + question + "」。";
-            }
-
-            answerDiv.innerHTML = "💬 回答：<br>" + answer;
-        }
-    </script>
+    {% if answer %}
+    <p><strong>答案：</strong> {{ answer }}</p>
+    {% endif %}
 </body>
 </html>
-
